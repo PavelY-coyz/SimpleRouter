@@ -2,19 +2,17 @@
 use Routing\Router;
 use Routing\Route;
 
+//required: add a Router instance to Route
 $router = new Router();
 Route::setRouter($router);
-/*
-Route::get('/', "HomeController@index");
-Route::get('/patients', 'PatientsController@index');
-Route::get('/patients/{id}', 'PatientsController@get');
-Route::get('/patients/{id}/metrics', 'PatientsMetricsController@index');
-Route::get('/patients/{id}/metrics/{abc}', 'PatientsMetricsController@get');
-*/
-//Route::printRoutes();
+
+//Add your own routes in format Route::httpMethod("uri_segment/{parameter}", "ControllerName@ControllerFunction");
+//or use the resource function Route::resource('segmentName1.segmentName2...segmentName_n')
+//this will create index, get, create, update, and delete nested-routes for SegmentName1SegmentName2...SegmentName_n controller); 
 Route::get('/', "HomeController@index");
 Route::resource('patients');
 Route::resource('patients.metrics');
 
+//Check for routes matching the $_SERVER request
 Route::$router->matchRoute();
 ?>
