@@ -1,4 +1,4 @@
 /vendor
 /.idea
-/Controllers
-/index.php
+#/Controllers
+#/index.php

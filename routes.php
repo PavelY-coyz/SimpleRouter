@@ -1,5 +1,4 @@
 <?php
-require 'vendor/autoload.php';
 use Routing\Router;
 use Routing\Route;
 
