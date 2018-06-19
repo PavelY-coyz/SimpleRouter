@@ -12,8 +12,7 @@ class Route {
   public static $router;
 
   public function __construct() {
-    $router = new Router();
-    print_r('this gets called');
+    
   }
 
 
