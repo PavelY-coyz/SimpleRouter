@@ -14,11 +14,15 @@ class PatientsController {
   }
 
   public function update($id) {
-    echo "PatientsController @ update($id)";
+    header('Content-Type: application/json');
+    echo json_encode(["PatientsController @ update($id)", "<br /> \$_SERVER['REQUEST_METHOD'] = {$_SERVER['REQUEST_METHOD']}"]);
+    die();
   }
 
   public function delete($id) {
-    echo "PatientsController @ delete($id)";
+    header('Content-Type: application/json');
+    echo json_encode(["PatientsController @ delete($id)", "<br /> \$_SERVER['REQUEST_METHOD'] = {$_SERVER['REQUEST_METHOD']}"]);
+    die();
   }
 }
  ?>

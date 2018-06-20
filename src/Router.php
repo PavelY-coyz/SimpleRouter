@@ -34,7 +34,7 @@ class Router {
                                             "uri_pattern" => $uri_pattern,
                                             "controller" => $controller,
                                             "action" => $action];
-        self::$current = [ "method" => "GET", "uri" => $uri, "controller" => $controller, "action" => $action];
+        //self::$current = [ "method" => "$method", "uri" => $uri, "controller" => $controller, "action" => $action];
       } //else its a douplicate and we dont want that.
 
     }
@@ -52,6 +52,7 @@ class Router {
           return;
         }
       }
+
       //would invoke your controller for handling errors.
       echo "matchRoute";
       include_once '/../404.php';
